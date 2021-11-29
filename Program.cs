@@ -16,9 +16,19 @@ namespace Exception_Handling
             {
                 Console.WriteLine("Error: "+ex.Message.ToString());
             }
-            finally
+            // finally
+            // {
+            //     Console.WriteLine("The operation is done.");
+            // }
+
+            try
             {
-                Console.WriteLine("The operation is done.");
+                 int a = int.Parse(null);
+            }
+            catch (ArgumentNullException ex)
+            {
+                Console.WriteLine("Entered null value.");
+                Console.WriteLine(ex);
             }
             
         }
